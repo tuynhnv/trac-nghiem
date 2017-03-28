@@ -53,6 +53,8 @@ export class QuizPageComponent implements OnInit {
           this.questiones[i]=new Question(snapshot.name,snapshot.key, snapshot.A, snapshot.B, snapshot.C, snapshot.D);
           this.questiones[i].isAnswer=false;
           this.questiones[i].index=i;
+          this.questiones[i].isAnswered="chưa trả lời";
+          this.questiones[i].userAnswer="";
           console.log(this.questiones[i].name + i);
           console.log(this.questiones[i].D +"  " + i);
           i++;
@@ -128,6 +130,13 @@ export class QuizPageComponent implements OnInit {
       this.pager.index = index;
       this.mode = 'lambaithi';
     }
+  }
+
+  isCorrect(question: Question) {
+    var isCorrect;
+     (question.userAnswer==question.key) ? isCorrect='Câu trả lời đúng' : isCorrect='Câu trả lời sai'  ;
+     (question.userAnswer=="") ? isCorrect='Bạn chưa trả lời':'';
+     return isCorrect;
   }
 }
   

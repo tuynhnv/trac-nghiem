@@ -1,6 +1,12 @@
 <div class="container">
         <div class="col-md-4">
+
+            
             <form class="form-horizontal"  id="myform" (submit)="addquestion($event, dethi.value, name.value, A.value, B.value, C.value, D.value, key.value)">
+
+                <div class="alert alert-success" *ngIf="alert==true">
+                <strong>Bạn đã thêm câu hỏi thành công!</strong>
+                </div>
 
                     <div class="form-group">
                        <label for="course">Câu hỏi thuộc đề thi:</label>
@@ -42,10 +48,9 @@
 
                     <div class="form-group">
                         <button id="add-more" name="add-more" class="btn btn-primary" type="submit">Thêm câu hỏi</button>
+                        <input class="btn btn-primary" type="reset" (click)="reset()" value="Thiết lập lại" />
                     </div>
+                    
             </form>
-            <!--<div >
-            <p style="text-align:center;">By <a href="http://bootsnipp.com/tarun90">Tarun Mahajan</a></p>
-            </div>-->
         </div>
     </div>

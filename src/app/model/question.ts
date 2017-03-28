@@ -10,7 +10,7 @@ export class Question {
     D: string;
     userAnswer: string;
     isAnswer: false;
-    isAnswered: "chua tra loi";
+    isAnswered: string;
     index: number;
     constructor(name: string, key: string, A: string, B: string, C: string, D: string){    
         this.name=name;

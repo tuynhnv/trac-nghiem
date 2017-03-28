@@ -10,6 +10,7 @@ import {AF} from "../../providers/af";
 export class AddquestionPageComponent implements OnInit {
 
   public quizs: FirebaseListObservable<any>;
+  public alert= false;
 
   constructor(public afService: AF) {
       this.quizs=this.afService.quizs;
@@ -21,6 +22,11 @@ export class AddquestionPageComponent implements OnInit {
 
   addquestion(event, dethi, name, A, B, C, D, key){
     event.preventDefault();
-    this.afService.addquestion(dethi, name, A, B, C, D, key)
+    this.afService.addquestion(dethi, name, A, B, C, D, key);
+    this.alert = true;
+  }
+
+  reset(){
+    this.alert= false;
   }
 }
