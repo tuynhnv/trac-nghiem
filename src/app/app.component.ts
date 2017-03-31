@@ -36,14 +36,11 @@ export class AppComponent {
           }
           else {
             this.afService.email = auth.auth.email;
-            this.afService.displayName = auth.auth.email;
-            // //this.afService.getregisteredUsers(this.afService.email);
-            // //this.afService.displayName =
-            // this.getdisplayName(this.afService.email);
-            // // console.log(this.afService.getdisplayName(this.afService.email));
-            // // console.log(this.afService.displayName);
+            //this.afService.displayName = auth.auth.email;
+            
           }
-
+          this.afService.displayName = this.afService.getdisplayName(this.afService.email);
+          this.afService.role = this.afService.getRole(this.afService.email);
           this.isLoggedIn = true;
           this.router.navigate(['']);
         }

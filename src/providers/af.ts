@@ -102,6 +102,7 @@ export class AF {
     return this.af.database.object('users/' + uid).set({
       displayName: name,
       email: email,
+      role: 'student',
     });
   }
 
@@ -161,7 +162,7 @@ export class AF {
   }
   
   getdisplayName(email: string){
-      this.af.database.list('registeredUsers', {
+      this.af.database.list('users', {
           query: {
             orderByChild: 'email',
             equalTo: email
@@ -169,11 +170,27 @@ export class AF {
      }).subscribe(list => {
        list.forEach(snapshot=> {
           if(snapshot.email = email) {
-            this.displayName = snapshot.name;
+            this.displayName = snapshot.displayName;
           }
        })
       });
       return this.displayName;
+  }
+
+  getRole(email: string){
+      this.af.database.list('users', {
+          query: {
+            orderByChild: 'email',
+            equalTo: email
+         }
+     }).subscribe(list => {
+       list.forEach(snapshot=> {
+          if(snapshot.email = email) {
+            this.role = snapshot.role;
+          }
+       })
+      });
+      return this.role;
   }
 
   addquestion(dethi, name, A, B, C, D, key){

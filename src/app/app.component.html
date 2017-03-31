@@ -20,18 +20,18 @@
       <!--<li class="nav-item">
         <a class="nav-link active" [routerLink]="['/quiz']">Làm bài thi</a>
       </li>-->
-      <li class="nav-item" *ngIf="afService.email=='admin@gmail.com'">
+      <li class="nav-item" *ngIf="afService.role=='admin'">
         <a class="nav-link" [routerLink]="['/usermanagement']">Quản lý người dùng</a>
       </li>
 
-      <li class="nav-item" *ngIf="afService.email=='admin@gmail.com'">
+      <li class="nav-item" *ngIf="afService.role=='admin'">
         <a class="nav-link" [routerLink]="['/quizmanagement']">Quản lý bài thi</a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/grade']">Xem điểm</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="afService.role=='teacher'">
         <a class="nav-link" [routerLink]="['/addquestion']">Thêm câu hỏi</a>
       </li>
     </ul>
