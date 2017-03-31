@@ -25,21 +25,33 @@
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>-->
-                <!--<script type='text/x-mathjax-config'>
-                    MathJax.Hub.Config({
-                    TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; } }
-                    });
-                </script>
-                    
-                <script type='text/x-mathjax-config'> 
-                    MathJax.Hub.Config({tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\(&#39;,&#39;\)&#39;]]}}); 
-                </script> 
-                    
-                <script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG' type='text/javascript'> 
-                </script>-->
+    
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+    <script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script> 
+    <script src="https://cdn.ckeditor.com/4.5.11/full/ckeditor.js"></script>         
 
 </head>
 <body>
+  <!--<textarea cols="10" id="editor1" name="editor1" rows="10" >&lt;p&gt;This is some &lt;strong&gt;sample text&lt;/strong&gt;. You are using &lt;a href="http://ckeditor.com/"&gt;CKEditor&lt;/a&gt;.&lt;/p&gt;
+	</textarea>
+
+	<script>
+		CKEDITOR.replace( 'editor1', {
+			extraPlugins: 'mathjax',
+			mathJaxLib: 'http://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS_HTML',
+			height: 320
+		} );
+
+		if ( CKEDITOR.env.ie && CKEDITOR.env.version == 8 ) {
+			document.getElementById( 'ie8-warning' ).className = 'tip alert';
+		}
+	</script>
+  <h1>Outside Angular one half = $\frac 12$</h1>-->
   <app-root>
     <img style="margin-left: 40vw; margin-top: 20vh;" src="https://progblog.io/img/logo-green.png">
   </app-root>

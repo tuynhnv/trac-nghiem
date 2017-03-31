@@ -5,27 +5,27 @@ var cacheName = 'cache-tracnghiem';
 
 //Files to save in cache
 var files = [
-  './',
-  './index.html',
-  './index.html?utm=homescreen', //SW treats query string as new request
-  './css/styles.css',
-  // 'https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700', //caching 3rd party content
-  './images/icons/android-chrome-192x192.png',
-  './images/push-on.png',
-  './images/push-off.png',
-  './images/icons/favicon-16x16.png',
-  './images/icons/favicon-32x32.png',
-  './js/push.js',
-  './js/toast.js',
-  './manifest.json',
-  './app/app.module.ts',
-  './app/app.component.ts',
-  './app/app.component.html',
-  './app/registration-page/registration-page.component.ts',
-  './app/login-page/login-page.component.ts',
-  './app/login-page/login-page.component.html',
-  './app/quiz-page/quiz-page.component.ts',
-  './providers/af.ts',
+  // './',
+  // './index.html',
+  // './index.html?utm=homescreen', //SW treats query string as new request
+  // './css/styles.css',
+  // // 'https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700', //caching 3rd party content
+  // './images/icons/android-chrome-192x192.png',
+  // './images/push-on.png',
+  // './images/push-off.png',
+  // './images/icons/favicon-16x16.png',
+  // './images/icons/favicon-32x32.png',
+  // './js/push.js',
+  // './js/toast.js',
+  // './manifest.json',
+  // './app/app.module.ts',
+  // './app/app.component.ts',
+  // './app/app.component.html',
+  // './app/registration-page/registration-page.component.ts',
+  // './app/login-page/login-page.component.ts',
+  // './app/login-page/login-page.component.html',
+  // './app/quiz-page/quiz-page.component.ts',
+  // './providers/af.ts',
    
 ];
 

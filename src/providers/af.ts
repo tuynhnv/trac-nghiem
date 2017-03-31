@@ -14,6 +14,7 @@ export class AF {
 
   public displayName: string;
   public email: string;
+  public role: string;
   public user: FirebaseObjectObservable<any>;
 
 
@@ -98,8 +99,8 @@ export class AF {
    * @returns {firebase.Promise<void>}
    */
   saveUserInfoFromForm(uid, name, email) {
-    return this.af.database.object('registeredUsers/' + uid).set({
-      name: name,
+    return this.af.database.object('users/' + uid).set({
+      displayName: name,
       email: email,
     });
   }
