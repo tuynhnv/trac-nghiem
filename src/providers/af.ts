@@ -105,6 +105,15 @@ export class AF {
     });
   }
 
+  addUser(displayName, email) {
+    var user = {
+      displayName: displayName,
+      email: email,
+      role: 'student',
+    };
+    return this.users.push(user);
+  }
+
   /**
    * Logs the user in using their Email/Password combo
    * @param email

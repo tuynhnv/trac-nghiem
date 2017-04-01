@@ -14,15 +14,9 @@ export class LoginPageComponent {
 
   loginWithGoogle() {
     this.afService.loginWithGoogle().then((data) => {
-      this.afService.saveUserInfoFromForm(data.uid, this.afService.displayName, this.afService.email).then(() => {
-      })
-      .catch((error) => {
-          this.error = error;
-        });
       // Send them to the homepage if they are logged in
       console.log(data);
       //this.afService.addUserInfo();
-
       this.router.navigate(['']);
     })
   }

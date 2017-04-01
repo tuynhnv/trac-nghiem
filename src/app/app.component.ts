@@ -31,15 +31,18 @@ export class AppComponent {
           // check nếu role= user, 
           // Set the Display Name and Email so we can attribute messages to them
           if(auth.google) {
+            this.afService.addUser(auth.google.displayName, auth.google.email);
             this.afService.displayName = auth.google.displayName;
             this.afService.email = auth.google.email;
+            
           }
           else {
             this.afService.email = auth.auth.email;
+            this.afService.displayName = this.afService.getdisplayName(this.afService.email);
             //this.afService.displayName = auth.auth.email;
             
           }
-          this.afService.displayName = this.afService.getdisplayName(this.afService.email);
+          
           this.afService.role = this.afService.getRole(this.afService.email);
           this.isLoggedIn = true;
           this.router.navigate(['']);
