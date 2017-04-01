@@ -17,6 +17,8 @@ import { GradePageComponent } from './grade-page/grade-page.component';
 import { AddquestionPageComponent } from './addquestion-page/addquestion-page.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { QuizManagementComponent } from './quiz-management/quiz-management.component';
+import { GradeManagementComponent } from './grade-management/grade-management.component';
+import { QuestionManagementComponent } from './question-management/question-management.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDpcHqGHomwkl2oNAIEFAaDr58jqW40pJg",
@@ -34,7 +36,9 @@ const routes: Routes = [
   { path: 'grade', component: GradePageComponent},
   { path: 'addquestion', component: AddquestionPageComponent},
   { path: 'usermanagement', component: UserManagementComponent},
-  { path: 'quizmanagement', component: QuizManagementComponent}
+  { path: 'quizmanagement', component: QuizManagementComponent},
+  { path: 'grademanagement', component: GradeManagementComponent},
+  { path: 'questionmanagement', component: QuestionManagementComponent}
   
 ];
 
@@ -48,7 +52,7 @@ const routes: Routes = [
     Ng2PaginationModule,
     //ElementRef
   ],
-  declarations: [ AppComponent, LoginPageComponent, HomePageComponent, RegistrationPageComponent, QuizPageComponent, GradePageComponent, AddquestionPageComponent, UserManagementComponent, QuizManagementComponent ],
+  declarations: [ AppComponent, LoginPageComponent, HomePageComponent, RegistrationPageComponent, QuizPageComponent, GradePageComponent, AddquestionPageComponent, UserManagementComponent, QuizManagementComponent, GradeManagementComponent, QuestionManagementComponent ],
   bootstrap: [ AppComponent ],
   providers: [AF, Timer]
 })

@@ -13,18 +13,22 @@
             <table class="table">
                 <thead>
                     <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="Lần thi" ></th>
+                        <th><input type="text" class="form-control" placeholder="Số thứ tự" ></th>
+                        <th><input type="text" class="form-control" placeholder="Tên thí sinh" ></th>
                         <th><input type="text" class="form-control" placeholder="Môn thi" ></th>
                         <th><input type="text" class="form-control" placeholder="Điểm thi" ></th>
                         <th><input type="text" class="form-control" placeholder="Thời gian" ></th>
+                        <th><input type="text" class="form-control" placeholder="Hành động" ></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let grade of grades | async | paginate: {itemsPerPage: 10, currentPage:page}; let index = index">
                         <td style="text-align: center">{{index+1}}</td>
-                        <td style="padding-left: 100px">{{grade.dethi}}</td>
+                        <td style="padding-left: 20px">{{grade.displayName}}</td>
+                        <td style="padding-left: 50px">{{grade.dethi}}</td>
                         <td style="text-align: center">{{grade.mark | number : '1.2-2'}}</td>
-                        <td style="padding-left: 80px">{{grade.timestamp | date:"MM/dd/yy hh:mm a"}}</td>
+                        <td style="padding-left: 20px">{{grade.timestamp | date:"MM/dd/yy hh:mm a"}}</td>
+                        <td style="text-align: center"><a>Xóa</a> <a>Sửa</a></td>
                     </tr>
                     
                 </tbody>

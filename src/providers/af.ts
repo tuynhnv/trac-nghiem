@@ -58,8 +58,9 @@ export class AF {
   addUserInfo(){
     //We saved their auth info now save the rest to the db.
     this.users.push({
-      email: this.email,
-      displayName: this.displayName
+      displayName: this.displayName,
+      email: this.email,  
+      role: 'student',
     });
   }
 
@@ -88,8 +89,6 @@ export class AF {
       email: email,
       password: password
     });
-
-
   }
 
   /**
